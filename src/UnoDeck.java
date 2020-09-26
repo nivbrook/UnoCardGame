@@ -48,4 +48,12 @@ public class UnoDeck {
 	public void shuffle() {
 		Collections.shuffle(cards);
 	}
+	
+	public boolean isEmpty() {
+		return cards.isEmpty();
+	}
+	
+	public UnoCard drawOne() {
+		return cards.remove(cards.size()-1);
+	}
 }

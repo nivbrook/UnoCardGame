@@ -5,12 +5,11 @@ public class Main {
 		// TODO Auto-generated method stub
 		UnoDeck unoDeck = new UnoDeck();
 		
-		System.out.println(unoDeck.getCardsCount());
-		for (UnoCard card : unoDeck.getCards()) {
-			System.out.println(card.toString());
-		}
-		
-		
+//		System.out.println(unoDeck.getCardsCount());
+//		for (UnoCard card : unoDeck.getCards()) {
+//			System.out.println(card.toString());
+//		}
+		unoDeck.shuffle();
 	}
 
 }
