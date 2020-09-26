@@ -3,10 +3,11 @@ import java.util.Collections;
 import java.util.List;
 
 public class UnoDeck {
-	private List<UnoCard> cards = new ArrayList<UnoCard>();
-	private int cardsCount;
+	private List<UnoCard> cards;
 	
 	public UnoDeck() {
+		cards = new ArrayList<UnoCard>();
+		
 		List<Color> colors = Color.getColors();
 		List<Value> values = Value.getValues();
 		
@@ -26,7 +27,6 @@ public class UnoDeck {
 			cards.add(new UnoCard(Color.WILD, Value.DRAW_FOUR, 50));
 		}
 		
-		cardsCount = cards.size();
 	}
 
 	public List<UnoCard> getCards() {
@@ -35,14 +35,6 @@ public class UnoDeck {
 
 	public void setCards(List<UnoCard> cards) {
 		this.cards = cards;
-	}
-
-	public int getCardsCount() {
-		return cardsCount;
-	}
-
-	public void setCardsCount(int cardsCount) {
-		this.cardsCount = cardsCount;
 	}
 	
 	public void shuffle() {
@@ -55,5 +47,9 @@ public class UnoDeck {
 	
 	public UnoCard drawOne() {
 		return cards.remove(cards.size()-1);
+	}
+	
+	public void refill(List<UnoCard> discardPile) {
+		cards = discardPile;
 	}
 }
