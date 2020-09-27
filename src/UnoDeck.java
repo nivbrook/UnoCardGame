@@ -46,7 +46,9 @@ public class UnoDeck {
 	}
 	
 	public UnoCard drawOne() {
-		return cards.remove(cards.size()-1);
+		UnoCard drawCard = cards.remove(cards.size()-1);
+		
+		return drawCard;
 	}
 	
 	public void refill(List<UnoCard> discardPile) {

@@ -26,4 +26,8 @@ public class UnoCard {
 	public int getScore() {
 		return score;
 	}
+	
+	public boolean isValid(Color validColor, Value validValue) {
+		return (color == Color.WILD || color == validColor || value == validValue);
+	}
 }
